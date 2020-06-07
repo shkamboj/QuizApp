@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"  href="/static/login.css">
+</head>
+<body>
+
+    <ul class="employees">
+  <% for(var i=0; i<Create.length; i++) {%>
+    <li class="employees">
+      <span><%=Create[i].noq + "   "%></span>
+      <a href="/quiztest"><%=Create[i].quiz_name%></a>
+    </li>
+  <% } %>
+</ul>
+</ul>
+    <div id="overlay"></div>
+    <div class="loginbox">
+        <h1>Please Select Your Subject.</h1><br>
+        <form action="/createquiz" method="post">
+      <select name="noq">
+        <option value="DBMS">DBMS</option>
+        <option value="M&S">Modelling & Simulation</option>
+      </select>
+      <input type="text" name = "quiz_name" placeholder="Name of Quiz" required="required"><br>
+      <input type="submit" value="Go">
+    </form>
+        <br>
+        <br>
+    </div>
+</body>
+</html>

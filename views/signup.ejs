@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="/static/signup.css">
+</head>
+<body>
+
+
+<main>
+  <header class="prompt">
+    <h1 align="center">Create Account</h1>
+  </header>
+
+  <div class="login-page">
+  <div class="form">
+    <form class="signup-form" action="/signup" name="form" method="POST">
+      <input type="text" name="rollno" placeholder="Roll No" required="required" />
+      <input type="email" name="email" placeholder="Email" required=" required" />
+        <input type="password" name="password" placeholder="Password" required="required" />
+
+      <button>Create Account</button>
+
+    </form>
+
+
+  <p class="message">Already Registered? <a href="/login">Login</a></p>
+
+
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"  href="/static/signup.css">
+     
+</head>
+<body>
+        <h1 class="prompt" align="center">Faculty LOGIN</h1><br>
+        <div class="login-page">
+        <div class="form">
+        <form action="/fac_login" method="POST">
+            <input type="text" name = "teach_id" placeholder="Teacher ID" required="required"><br>
+            <input type="password" name = "password" placeholder="Password" required="required">
+            <button>Login</button>
+            <p class="message">Forgot Password?<a href="/login_page/change_password"> Reset</a></p>
+        <p  class="message">Don't have an account<a href="/signup"> Sign Up</a></p>
+        </form>
+    </div>
+</body>
+</html>

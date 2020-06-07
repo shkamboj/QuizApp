@@ -1,0 +1,41 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background:#eee;
+  position:absolute;
+  top:50px;
+  left:400px;
+}
+
+.content{
+  background:#fff;
+  width:300px;
+  height:279px;
+  border-radius:6px;
+}
+
+.register-form{
+  font-family: 'Roboto', sans-serif;
+  background:#eee;
+  border:#eee;
+  border-radius:6px;
+  position:relative;
+  top:50px;
+  left:50px;
+  margin:3px;
+  height:20px;
+}
+
+.title{
+  font-size:20px;
+}
+
+.button{
+  background:#29ACEA;
+  border:#29ACEA;
+  border-radius:6px;
+  width:100px;
+  position:relative;
+  left:90px;
+  cursor:pointer;
+  top:10px;
+}

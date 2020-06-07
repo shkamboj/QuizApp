@@ -1,0 +1,54 @@
+<link rel="stylesheet"  href="/static/tender.css">
+
+-
+  var news = [
+    {
+      id: 0,
+      title: "Forum des métiers",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porta rutrum eros in fermentum. Praesent pharetra nisl vel enim venenatis bibendum. Etiam hendrerit fringilla ante eu eleifend. In id varius nisl, id sodales nulla. Suspendisse at leo quis risus blandit dignissim at eget velit.",
+      thumb: "https://picsum.photos/750/400",
+    }, {
+      id: 1,
+      title: "Journée porte ouverte",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porta rutrum eros in fermentum. Praesent pharetra nisl vel enim venenatis bibendum. Etiam hendrerit fringilla ante eu eleifend. In id varius nisl, id sodales nulla. Suspendisse at leo quis risus blandit dignissim at eget velit.",
+      thumb: "https://picsum.photos/750/400?image=0",
+    }
+  ];
+mixin indicator(n)
+  if(n.id === 0)
+    li(data-target="#carousel-single" data-slide-to=n.id class="active")
+  else
+    li(data-target="#carousel-single" data-slide-to=n.id)
+
+mixin figure(n)
+  figure
+    img(src=n.thumb alt=n.title)
+    figcaption.carousel-caption
+      h3=n.title
+      .content=n.content
+      a Lien
+
+mixin carousel-content(n)
+  if(n.id === 0)
+    section.carousel-item.active
+      +figure(n)
+  else 
+    section.carousel-item
+      +figure(n)
+
+#carousel-single.carousel.slide.add-big-bottom(data-ride="carousel" data-interval="false")
+  ol.carousel-indicators
+    for n in news
+      +indicator(n)
+      
+  .carousel-inner
+    for n in news
+      +carousel-content(n)
+
+  a.carousel-item-left.carousel-control-prev(href="#carousel-single" data-slide="prev")
+    svg(viewBox="0 0 24 24")
+      path(d="M15.422 7.406L10.828 12l4.594 4.594L14.016 18l-6-6 6-6z")
+
+  a.carousel-item-right.carousel-control-next(href="#carousel-single" data-slide="next")
+    svg(viewBox="0 0 24 24")
+      path(d="M9.984 6l6 6-6 6-1.406-1.406L13.172 12 8.578 7.406z")

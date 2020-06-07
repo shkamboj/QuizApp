@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:16px;
+}
+.mobile {
+  margin-top: 0px;
+  display:block;
+  width:100%;
+background:#EFD3A3*/;
+line-height: 1.6em;
+font-weight: 400;
+width:100%;
+text-align:center;
+  position: relative;
+  margin-left: 0;
+}
+/*Strip the ul of padding and list styling*/
+.mobile ul {
+  list-style-type:none;
+  margin: 0 auto;
+  padding-left:0;
+  text-align:center;
+  width:100%;
+  position: absolute;
+  background: #8aa8bd;
+}
+
+/*Create a horizontal list with spacing*/
+.mobile li {
+  display:inline-block;
+  /*float: left;
+  margin-right: 1px;*/
+}
+
+/*Style for menu links*/
+.mobile li a {
+  display:block;
+  min-width:140px;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-transform:uppercase;
+  background: #8aa8bd;
+  text-decoration: none;
+  margin-left:-5px;
+  padding: 10px 0;  
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+}
+
+/*Hover state for top level links*/
+.mobile li:hover a {
+  color: #4db3ff;
+  background-color:#ccddee;
+}
+
+/*Style for dropdown links*/
+.mobile li:hover ul a {
+  background: #f3f3f3;
+  color: #2f3036;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+.mobile li:hover .mobile-menu ul a:hover {
+  color: #4db3ff;
+}
+
+/*Hide dropdown links until they are needed*/
+.mobile li ul {
+  display: none;
+}
+
+/*Make dropdown links vertical*/
+.mobile li ul li {
+  display: block;
+  float: none;
+}
+
+/*Prevent text wrapping*/
+.mobile li ul li a {
+  width: auto;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.mobile .show-menu {
+  text-decoration: none;
+  color: #fff;
+  background: #8aa8bd;
+  text-align: center;
+  padding: 10px 15px;
+  display: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.mobile .show-menu span{
+   padding-left: 35px;
+}
+
+/*Hide checkbox*/
+.mobile input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+.mobile input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 800px){
+  .mobile .lines {
+    border-bottom: 15px double #f8f8f8; 
+    border-top: 5px solid #f8f8f8; 
+    content:"";
+    height: 5px; 
+    width:20px;
+    padding-right:15px;
+  float: right;
+}
+  /*Make dropdown links appear inline*/
+  .mobile ul {
+    position: static;
+    display: none;
+  }
+  /*Create vertical spacing*/
+  .mobile li {
+    margin-bottom: 1px;
+  }
+  /*Make all menu links full width*/
+  .mobile ul li, .mobile- li a {
+    width: 100%;
+  }
+  /*Display 'show menu' link*/
+  .mobile .show-menu {
+    display:block;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="mobile">
+<label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
+  <input type="checkbox" id="show-menu">
+    <ul id="menu">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/takeaquiz">Take a Quiz</a>   </li>
+    <li><a href="/fac_login">Submit Questions</a></li>
+    <li><a href="/myprofile">My Profile</a></li>
+    <li><a href="/leader_route">Leaderboards</a></li>
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+  </ul>
+</nav>
+</body>
+</html>

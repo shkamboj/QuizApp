@@ -1,0 +1,44 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/custom.css">
+    <title>User Profile</title>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+
+<body>
+
+<button id="follow-button">+ Follow</button>  
+<div class="table-title">
+<h3><span><%= "Roll No.: " + Test[0].uname%></span></h3>
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">S.No.</th>
+<th class="text-left">Subject</th>
+<th class="text-left">Total_Questions</th>
+<th class="text-left">Correct</th>
+<th class="text-left">Percentage</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+  <% for(var i=0; i<Test.length; i++) {%>
+      <tr>
+      <td class="text-left"><span><%=i+1 + "."%></span></td>
+      <td class="text-left"><span><%=Test[i].topic%></span></td>
+      <td class="text-left"><span><%=Test[i].total_ques%></span></td>
+       <td class="text-left"><span><%=Test[i].correct%></span></td>
+      <td class="text-left"><span><%=Test[i].percentage%></span></td>
+  </tr>
+      
+  <% } %>
+
+</tbody>
+</table>
+
+  
+
+  </body>

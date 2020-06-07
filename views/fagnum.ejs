@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+ <form action="/fagnum" method="POST">
+<p>Name:<input name = "fullname" type="text" ></p>
+<p>Bill By:<input name = "billby" type="text"></p>
+<p>Bill To:<input name = "billto" type="text" ></p>
+<p>Date:<input name = "date" type="text" id="datepicker"></p>
+<button>Sign up</button>
+ </form>
+ 
+</body>
+</html>

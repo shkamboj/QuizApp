@@ -1,0 +1,44 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/custom.css">
+    <title>LeaderBoard</title>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+
+<body>
+
+<h1 text-align="centre"><span><%=Test[0].topic%></span> LeaderBoard</h1>
+<div class="table-title">
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">S.No.</th>
+<th class="text-left">Roll No.</th>
+<th class="text-left">Total_Ques</th>
+<th class="text-left">Correct</th>
+<th class="text-left">Percentage</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+  <% for(var i=0; i<Test.length; i++) {%>
+      <tr>
+      <td class="text-left"><span><%=i+1 + "."%></span></td>
+      <td class="text-left"><span><%=Test[i].uname%></span></td>
+      <td class="text-left"><span><%=Test[i].total_ques%></span></td>
+       <td class="text-left"><span><%=Test[i].correct%></span></td>
+      <td class="text-left"><span><%=Test[i].percentage%></span></td>
+  </tr>
+      
+  <% } %>
+
+</tbody>
+</table>
+
+<div onclick="location.href='/'" type = "button" class="buttonOne">Home</div>
+  
+
+  </body>

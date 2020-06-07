@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"  href="/static/login.css">
+</head>
+<body>
+    <a href="/">Home</a>
+    <div id="overlay"></div>
+    <div class="loginbox">
+        <h1>Please Enter The Question & its options, page will be reloaded again.</h1><br>
+        <form action="/ten" method="POST">
+            <textarea type="text" rows="5" name="q1" cols="180" placeholder="Question" required="required"></textarea><br><br>
+            <input type="text" name = "q11" placeholder="Option1" required="required">
+            <input type="text" name = "q12" placeholder="Option2" required="required">
+            <input type="text" name = "q13" placeholder="Option3" required="required">
+            <input type="text" name = "q14" placeholder="Option4" required="required">
+            <input type="text" name = "anss" placeholder="Answer" required="required">
+            <br><br>
+            
+            <br>
+            <br>
+            <br>
+            <input type="submit"  value="SUBMIT">
+        </form>
+        <br>
+        <br>
+    </div>
+</body>
+</html>

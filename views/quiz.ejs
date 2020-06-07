@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"  href="/static/login.css">
+     <script type="text/javascript">
+         <!--
+        $(document).ready(function() {
+    $("button").click(function() {
+        $(".logo").fadeOut(400);
+        $(".form").fadeOut(500, function() {
+            $(".box").html("<h1>Sucess!</h1>");
+        });
+        $(".box").height("80px");
+        $(".box").css("text-align", "center");
+    });
+    $("input").focus(function() {
+        $(this).css({
+            background: "#408cdd",
+            color: "#fff",
+            borderColor: "#408cdd"
+        });
+        $(this)
+            .siblings("label")
+            .css({
+                top: "-6px",
+                color: "#408cdd"
+            });
+    });
+    $("input").blur(function() {
+        if ($(this).val() == "") {
+            $(this).css({
+                background: "#fff",
+                color: "#aaaaaa",
+                borderColor: "rgb(50, 50, 50)"
+            });
+            $(this)
+                .siblings("label")
+                .css({
+                    top: "28px",
+                    color: "#7f7f7f"
+                });
+        }
+    });
+});
+         //-->
+      </script>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div class="loginbox">
+        <h1>Please Select Your Subject.</h1><br>
+        <form action="/quiz" method="post">
+      <select name="noq">
+        <option value="DBMS">DBMS</option>
+        <option value="M&S">Modelling & Simulation</option>
+      </select>
+      <input type="submit" value="Go">
+    </form>
+        <br>
+        <br>
+    </div>
+</body>
+</html>

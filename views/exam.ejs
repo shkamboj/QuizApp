@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+<h1>Multiple Choice Questions.</h1>
+  <ul class="employees">
+  <% for(var i=0; i<Quizq.length; i++) {%>
+  <% var j =i+1;%>
+    <li class="employees">
+      <span><%= "Q" + j + ". " + Quizq[i].q1%></span><br>
+      <input type="radio" name="answer" value="A">
+      <span><%="(A)"+ " "  + Quizq[i].q11%></span><br>
+      <input type="radio" name="answer" value="B">
+      <span><%= "(B)"+ " " + Quizq[i].q12%></span><br>
+      <input type="radio" name="answer" value="C">
+      <span><%="(C)"+ " " + Quizq[i].q13%></span><br>
+      <input type="radio" name="answer" value="D">
+      <span><%= "(D)"+ " " + Quizq[i].q14%></span><br>
+      <br>
+
+    </li>
+  <% } %>
+</ul>
+</ul>
+</div>
+</body>
+</html>
